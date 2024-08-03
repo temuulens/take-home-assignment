@@ -67,7 +67,12 @@ The project is divided into three main parts:
 ### Frontend Setup
 1. Navigate to the `webchat-frontend` directory.
 2. Run `npm install` to install dependencies.
-3. Start the React app with `npm start`.
+3. Create a `.env` file in the `webchat-frontend` directory with the following content:
+   ```
+   REACT_APP_BACKEND_URL=http://localhost:3001
+   ```
+   Adjust the URL if your backend is running on a different port or host.
+4. Start the React app with `npm start`.
 
 ### Running the Application
 1. Ensure the backend server is running.
