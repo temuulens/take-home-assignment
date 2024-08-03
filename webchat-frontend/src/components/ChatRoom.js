@@ -16,7 +16,7 @@ const ChatRoom = ({ user }) => {
     if (!user) return;
 
     // Initialize socket connection
-    socket = io('http://localhost:3001');
+    socket = io(process.env.REACT_APP_BACKEND_URL);
 
     // Emit join event
     socket.emit('join', user);
@@ -58,7 +58,7 @@ const ChatRoom = ({ user }) => {
 
   const loadOlderMessages = async () => {
     if (lastMessageDate) {
-      const response = await fetch(`http://localhost:3001/messages/older?before=${lastMessageDate.toISOString()}`);
+      const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/messages/older?before=${lastMessageDate.toISOString()}`);
       const newMessages = await response.json();
       setMessages((prevMessages) => [...newMessages, ...prevMessages].sort((a, b) => new Date(a.timestamp) - new Date(b.timestamp)));
 
