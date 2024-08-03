@@ -85,3 +85,10 @@ To run load tests:
 2. Install Artillery globally: `npm install -g artillery`
 3. Navigate to the `webchat-loadtest` directory.
 4. Run the test script with `artillery run chat-load-test.yml`.
+
+## UI
+
+![login screen](./images/chatlogin.JPG "login")
+![chatroom screen 1](./images/chatroom1.JPG "chatroom1")
+![chatroom screen 2](./images/chatroom2.JPG "chatroom2")
+
