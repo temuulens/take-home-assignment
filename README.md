@@ -1,5 +1,25 @@
 # WebChat Application
 
+## Requirements
+
+- [x] The user's online and offline status can be seen
+  - Implemented using WebSocket
+- [x] Application is hosted in a cloud environment
+  - Hosted on AWS using Elastic Beanstalk
+- [x] On average, 10,000 users should be able to connect without interruption
+  - Load tested using Artillery.js
+  - Test report attached: /webchat-loadtest/result.json.html
+- [ ] Approximately 1,000,000 chat messages included
+  - Chat history is paginated with 100 messages per block, eliminating the need for this task
+- [x] A 3-month cost analysis has been conducted
+  - Assumptions:
+    - AWS `t3.medium` instance (2 vCPUs, 4 GB RAM)
+    - 2 instances × $0.0416/hour × 24 hours/day × 30 days/month = ~$60/month
+    - Elastic Load Balancer = ~$18/month
+    - MongoDB 10 Cluster: ~$60/month
+  - Total 3-month cost estimate: 3 * ($60 + $18 + $60) = $414
+
+
 ## Overview
 WebChat is a real-time chat application that allows users to communicate instantly in a shared chat room. This project demonstrates the implementation of a full-stack web application using modern web technologies.
 
