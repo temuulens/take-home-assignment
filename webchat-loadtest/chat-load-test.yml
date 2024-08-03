@@ -2,12 +2,10 @@ config:
   target: "http://localhost:3001"
   phases:
     - duration: 60
-      arrivalRate: 5
-      rampTo: 20
+      arrivalRate: 10
+      rampTo: 100
+      maxVusers: 10000
       name: "Ramp up load"
-    - duration: 120
-      arrivalRate: 20
-      name: "Sustained load"
   socketio:
     transports: ["websocket"]
 
