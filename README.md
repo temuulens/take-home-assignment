@@ -9,6 +9,7 @@
 - [x] On average, 10,000 users should be able to connect without interruption
   - Load tested using Artillery.js
   - Test report attached: /webchat-loadtest/result.json.html
+  - We can optimize this buy horizontal scale & using redis pub sub instead websocket service
 - [ ] Approximately 1,000,000 chat messages included
   - Chat history is paginated with 100 messages per block, eliminating the need for this task
 - [x] A 3-month cost analysis has been conducted
@@ -19,6 +20,9 @@
     - MongoDB 10 Cluster: ~$60/month
   - Total 3-month cost estimate: 3 * ($60 + $18 + $60) = $414
 
+
+## URL 
+http://webchatfront.s3-website-ap-southeast-1.amazonaws.com/
 
 ## Overview
 WebChat is a real-time chat application that allows users to communicate instantly in a shared chat room. This project demonstrates the implementation of a full-stack web application using modern web technologies.
